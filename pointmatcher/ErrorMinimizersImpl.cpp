@@ -286,6 +286,10 @@ typename PointMatcher<T>::TransformationParameters ErrorMinimizersImpl<T>::Point
 			// be determined, it comes out full of NaNs. The correct rotation is the identity.
 			mOut.block(0, 0, dim-1, dim-1) = Matrix::Identity(dim-1, dim-1);
 		}
+		if (mOut != mOut)
+                {
+			mOut = Matrix::Identity(dim, dim); // test this?
+                }
 	}
 	else
 	{
