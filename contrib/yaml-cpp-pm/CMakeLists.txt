@@ -49,7 +49,7 @@ endif()
 
 if(APPLE)
 	if(APPLE_UNIVERSAL_BIN)
-		set(CMAKE_OSX_ARCHITECTURES ppc;i386)
+#BINARY BUILDER IGNORE 
 	endif()
 endif()
 
@@ -58,7 +58,7 @@ if(WIN32)
 		add_definitions(-D${PROJECT_NAME}_DLL)	# use or build Windows DLL
 	endif()
 	if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
-		set(CMAKE_INSTALL_PREFIX "C:/")
+#BINARY BUILDER IGNORE 
 	endif()
 endif()
 
@@ -73,7 +73,7 @@ if(CMAKE_COMPILER_IS_GNUCXX)
 
 	### Project stuff
 	if(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
-		set(CMAKE_BUILD_TYPE Release)
+#BINARY BUILDER IGNORE 
 	endif()
 	#
 	set(CMAKE_CXX_FLAGS_RELEASE "-O2")
